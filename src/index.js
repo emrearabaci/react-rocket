@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './config/reportWebVitals';
 
 // Styles and Scripts
-import './styles/index.css';
+import './styles/index.scss';
 
 // Components
 import App from './App';
