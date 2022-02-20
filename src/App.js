@@ -1,12 +1,20 @@
-import './styles/App.css';
+import React from 'react';
+
+// Styles
+import './styles/app.scss';
+
+// Components
+import Wrapper from './components/layout/Wrapper';
 
 function App() {
   document.title = 'React Rocket';
   return (
     <div>
-      <div className="greetings">
-        <h2 data-testid="header">react rocket</h2>
-      </div>
+      <Wrapper>
+        <div className="greetings">
+          <h2 data-testid="header">react rocket</h2>
+        </div>
+      </Wrapper>
     </div>
   );
 }
