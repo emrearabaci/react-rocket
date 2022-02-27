@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Dependencies
 import { render, screen } from '@testing-library/react';
 
 // Test Config
@@ -7,11 +9,9 @@ import '../config/setupTests';
 // Components
 import App from '../App';
 
-describe('App.js', () => {
-  test('Header text renders correctly', () => {
+describe('App.js / "./src/App.js"', () => {
+  test('Document Title (Window Title) renders correctly?', () => {
     render(<App />);
-    const textEl = screen.getByTestId('header');
-    expect(textEl).toBeInTheDocument();
-    expect(textEl).toHaveTextContent('react rocket');
+    expect(global.window.document.title).toBe('React Rocket');
   });
 });
