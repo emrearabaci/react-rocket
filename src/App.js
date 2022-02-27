@@ -1,20 +1,24 @@
 import React from 'react';
 
+// Dependencies
+import { BrowserRouter } from 'react-router-dom';
+
 // Styles
 import './styles/app.scss';
 
 // Components
 import Wrapper from './components/layout/Wrapper';
+import RouterLayout from './components/layout/RouterLayout';
 
 function App() {
   document.title = 'React Rocket';
   return (
     <div>
-      <Wrapper>
-        <div className="greetings">
-          <h2 data-testid="header">react rocket</h2>
-        </div>
-      </Wrapper>
+      <BrowserRouter>
+        <Wrapper>
+          <RouterLayout />
+        </Wrapper>
+      </BrowserRouter>
     </div>
   );
 }
